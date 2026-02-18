@@ -115,9 +115,9 @@ analytics:
 author:
   name             : "Huilin Zhang"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Materials Informatics | Applied Machine Learning"
+  bio              : "Materials Informatics | ML-driven Machine Learning"
   location         : "China"
-  email            : ""
+  email            : "222241806503@stu.just.edu.cn"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
