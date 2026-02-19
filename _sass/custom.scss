@@ -21,7 +21,6 @@ code, pre, kbd, samp {
 .author__avatar {
   width: 180px; /* 你可以改成 160/200 自己试 */
 }
-
 .author__avatar img {
   max-width: 180px;
   width: 180px;
@@ -35,26 +34,74 @@ code, pre, kbd, samp {
   background-color: #2F3E53 !important; /* 换成你选的颜色 */
   border-top: 0 !important;
 }
-
 .page__footer,
 .page__footer a,
 .page__footer .social-icons .svg-inline--fa {
   color: #ffffff !important; /* 保证文字/图标可读 */
 }
 
-/* Masthead: make sure it's NOT fixed (scrolls with page) */
+/* -----------------------------
+   1) Sticky TOP NAV (masthead)
+   ----------------------------- */
+
+/* 让顶部导航固定 */
 .masthead {
-  position: static !important; /* 覆盖你之前的 fixed */
-  top: auto !important;
-  left: auto !important;
-  right: auto !important;
-  z-index: auto !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 9999 !important;
 }
 
-/* Remove extra top padding that was used for fixed masthead */
-.page__inner-wrap,
-.initial-content {
-  padding-top: 0 !important;
+/* 给正文腾出空间，避免被固定导航遮住
+   70px 不够就改 80/90；太空就改 60 */
+.initial-content,
+.page__inner-wrap {
+  padding-top: 80px !important;
+}
+
+/* -----------------------------
+   2) Sticky LEFT AUTHOR CARD
+   ----------------------------- */
+
+/* Minimal Mistakes 的左侧栏通常是 sidebar + author-profile
+   这里用 sticky：滚动时固定在视窗中（类似 Zhiwei He） */
+.sidebar,
+.author__content,
+.author__avatar,
+.author__name,
+.author__bio {
+  position: relative;
+}
+
+/* 真正让“整个作者卡片区域”固定的写法 */
+.sidebar__right,
+.sidebar__left,
+.sidebar {
+  position: sticky !important;
+  top: 90px;              /* 要略大于 masthead 高度 */
+  align-self: flex-start; /* 防止被拉伸导致 sticky 失效 */
+}
+
+/* 如果你用的是 author_profile: true，作者卡片常在 .author-profile 里 */
+.author-profile {
+  position: sticky !important;
+  top: 90px !important;  /* 同上：略大于导航高度 */
+}
+
+/* 移动端别强行 sticky（会挤爆布局），这里关闭 */
+@media (max-width: 1024px) {
+  .sidebar,
+  .sidebar__left,
+  .sidebar__right,
+  .author-profile {
+    position: static !important;
+    top: auto !important;
+  }
+  .initial-content,
+  .page__inner-wrap {
+    padding-top: 70px !important;
+  }
 }
 
 /* Content typography */
@@ -62,12 +109,10 @@ code, pre, kbd, samp {
   font-size: 0.95rem;
   line-height: 1.7;
 }
-
 .page__content h2 {
   font-size: 1.35rem;
   margin-top: 1.6em;
 }
-
 .page__content h3 {
   font-size: 1.15rem;
 }
