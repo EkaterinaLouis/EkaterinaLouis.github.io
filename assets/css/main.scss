@@ -26,3 +26,18 @@ search: false
 .initial-content {
   padding-top: 70px; /* 视你导航栏高度可调 60~90 */
 }
+/* 正文整体字体更舒服 */
+.page__content {
+  font-size: 0.95rem;   /* 可改 0.9~1.0 */
+  line-height: 1.7;
+}
+
+/* 小标题别那么“硬” */
+.page__content h2 {
+  font-size: 1.35rem;
+  margin-top: 1.6em;
+}
+
+.page__content h3 {
+  font-size: 1.15rem;
+}
