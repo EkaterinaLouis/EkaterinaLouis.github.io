@@ -11,9 +11,12 @@ h1, h2, h3, h4, h5, h6,
                Arial, "Noto Sans", "Liberation Sans", sans-serif !important;
 }
 
+/* Code blocks */
 code, pre, kbd, samp {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+               "Liberation Mono", "Courier New", monospace !important;
 }
+
 /* Bigger author avatar (left sidebar) */
 .author__avatar {
   width: 180px; /* 你可以改成 160/200 自己试 */
@@ -26,6 +29,7 @@ code, pre, kbd, samp {
   object-fit: cover;
   border-radius: 50%;
 }
+
 /* Footer color -> match avatar background */
 .page__footer {
   background-color: #2F3E53 !important; /* 换成你选的颜色 */
@@ -37,23 +41,33 @@ code, pre, kbd, samp {
 .page__footer .social-icons .svg-inline--fa {
   color: #ffffff !important; /* 保证文字/图标可读 */
 }
-/* 固定导航栏 */
+
+/* Masthead: make sure it's NOT fixed (scrolls with page) */
 .masthead {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 9999;
+  position: static !important; /* 覆盖你之前的 fixed */
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  z-index: auto !important;
 }
 
+/* Remove extra top padding that was used for fixed masthead */
 .page__inner-wrap,
 .initial-content {
-  padding-top: 70px;
+  padding-top: 0 !important;
 }
 
-/* 正文 */
+/* Content typography */
 .page__content {
   font-size: 0.95rem;
   line-height: 1.7;
 }
 
-.page__content h2 { font-size: 1.35rem; margin-top: 1.6em; }
-.page__content h3 { font-size: 1.15rem; }
+.page__content h2 {
+  font-size: 1.35rem;
+  margin-top: 1.6em;
+}
+
+.page__content h3 {
+  font-size: 1.15rem;
+}
