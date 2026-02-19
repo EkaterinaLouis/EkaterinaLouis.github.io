@@ -37,3 +37,23 @@ code, pre, kbd, samp {
 .page__footer .social-icons .svg-inline--fa {
   color: #ffffff !important; /* 保证文字/图标可读 */
 }
+/* 固定导航栏 */
+.masthead {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 9999;
+}
+
+.page__inner-wrap,
+.initial-content {
+  padding-top: 70px;
+}
+
+/* 正文 */
+.page__content {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.page__content h2 { font-size: 1.35rem; margin-top: 1.6em; }
+.page__content h3 { font-size: 1.15rem; }
