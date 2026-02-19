@@ -116,3 +116,27 @@ code, pre, kbd, samp {
 .page__content h3 {
   font-size: 1.15rem;
 }
+/* =========================
+   Nav compact + left
+========================= */
+.masthead__menu .visible-links a {
+  padding: 0.4rem 0.55rem !important;  /* 更紧凑 */
+  font-size: 0.95rem !important;
+}
+
+.masthead__menu .visible-links li {
+  margin-right: 0.6rem !important;     /* 更紧凑 */
+}
+
+/* 隐藏标题后面的 Permalink（锚点图标/文字） */
+.header-link,
+.anchorjs-link,
+a.header-link {
+  display: none !important;
+}
+
+/* 让标题间距更像学术主页 */
+.page__content h2 {
+  margin-top: 1.3em !important;
+  padding-top: 0.2em !important;
+}
