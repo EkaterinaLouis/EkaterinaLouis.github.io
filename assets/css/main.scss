@@ -1,34 +1,14 @@
 ---
+search: false
 ---
 
+@charset "utf-8";
+
+/* 1) 皮肤（air 等） */
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'air' }}";
+
+/* 2) 主题主样式 */
 @import "minimal-mistakes";
 
-/* 固定导航栏 */
-.masthead {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-}
-
-.page__inner-wrap,
-.initial-content {
-  padding-top: 70px;
-}
-
-/* 正文整体字体更舒服 */
-.page__content {
-  font-size: 0.95rem;
-  line-height: 1.7;
-}
-
-/* 小标题别那么“硬” */
-.page__content h2 {
-  font-size: 1.35rem;
-  margin-top: 1.6em;
-}
-
-.page__content h3 {
-  font-size: 1.15rem;
-}
+/* 3) 你的自定义覆盖（头像放大、footer颜色、字体等都在这里） */
+@import "custom";
