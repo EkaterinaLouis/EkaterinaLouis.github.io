@@ -1,19 +1,9 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
-search: false
----
-
-@charset "utf-8";
-
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
-@import "custom";
----
-# Only the main Sass file needs front matter (the dashes are enough)
 ---
 
 @import "minimal-mistakes";
 
+/* 固定导航栏 */
 .masthead {
   position: fixed;
   top: 0;
@@ -24,11 +14,12 @@ search: false
 
 .page__inner-wrap,
 .initial-content {
-  padding-top: 70px; /* 视你导航栏高度可调 60~90 */
+  padding-top: 70px;
 }
+
 /* 正文整体字体更舒服 */
 .page__content {
-  font-size: 0.95rem;   /* 可改 0.9~1.0 */
+  font-size: 0.95rem;
   line-height: 1.7;
 }
 
