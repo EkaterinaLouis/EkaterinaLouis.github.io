@@ -1,11 +1,13 @@
 main:
-  - title: "Home"
-    url: /
-  - title: "About me"
+  - title: "About"
     url: /#about
   - title: "Research"
-    url: /#research-interests
-  - title: "Projects"
-    url: /#current-project
+    url: /#research
+  - title: "Project"
+    url: /#project
+  - title: "Skills"
+    url: /#skills
+  - title: "Contact"
+    url: /#contact
   - title: "CV"
     url: /cv/
