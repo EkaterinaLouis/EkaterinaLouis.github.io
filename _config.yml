@@ -114,7 +114,7 @@ analytics:
 # Site Author
 author:
   name             : "Huilin Zhang"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/bio-photo.jpg"
 
   location         : "China"
   email            : "222241806503@stu.just.edu.cn"
