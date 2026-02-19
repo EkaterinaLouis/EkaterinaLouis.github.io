@@ -17,17 +17,18 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "n
 # Site Settings
 locale                   : en-US
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Huilin Zhang"
-title_separator          : "|"
-subtitle                 : Materials Informatics | ML-driven Materials Design # site tagline that appears below site title in masthead
+# title                    : "Huilin Zhang"
+# title_separator          : "|"
+# subtitle                 : Materials Informatics | ML-driven Materials Design # site tagline that appears below site title in masthead
 name                     : "Huilin Zhang"
-description              : "Materials Informatics | Applied Machine Learning"
+description              : "Materials Informatics | ML-driven Materials Learning"
 url                      : "https://ekaterinalouis.github.io"# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : ""# the subpath of your site, e.g. "/blog"
 repository               : EkaterinaLouis/EkaterinaLouis.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+masthead_title: " "
+
 breadcrumbs              : # true, false (default)
 words_per_minute         : 200
 enable_copy_code_button  : # true, false (default)
@@ -115,7 +116,7 @@ analytics:
 author:
   name             : "Huilin Zhang"
   avatar           : "/assets/bio-photo .jpg"
-
+  subtitle         : Materials Informatics | ML-driven Materials Design
   location         : "China"
   email            : "222241806503@stu.just.edu.cn"
   links:
