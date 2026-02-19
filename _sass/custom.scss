@@ -26,3 +26,14 @@ code, pre, kbd, samp {
   object-fit: cover;
   border-radius: 50%;
 }
+/* Footer color -> match avatar background */
+.page__footer {
+  background-color: #2F3E53 !important; /* 换成你选的颜色 */
+  border-top: 0 !important;
+}
+
+.page__footer,
+.page__footer a,
+.page__footer .social-icons .svg-inline--fa {
+  color: #ffffff !important; /* 保证文字/图标可读 */
+}
